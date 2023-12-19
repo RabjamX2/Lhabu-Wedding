@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Wedding Invitation</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+	</head>
+	<body>
+		<div id="scroll-container">
+			<div id="landing" class="page">
+				<!-- Layered images -->
+				<img src="{{url_for('static', filename='images/backgroundSmall.png')}}" alt="landing" class="landing-image" />
+				<div id="landing-gradient"></div>
+				<h1 id="landing-header">Our Wedding</h1>
+				<div id="landing-content">
+					<h2>Tenzin Yawongtsang</h2>
+					<h3>&</h3>
+					<h2>Lobsang Choedon</h2>
+					<h3>02 / 14 / 2024</h3>
+				</div>
+			</div>
+
+			<div id="wedding-info" class="page"
+				><h2>Wedding Pictures</h2>
+				<div class="carousel">
+					<div class="carousel-track">
+						<div class="carousel-images">
+							<img src="{{url_for('static', filename='images/Couple/1.png')}}" alt="Image 1" />
+							<img src="{{url_for('static', filename='images/Couple/2.png')}}" alt="Image 2" />
+							<img src="{{url_for('static', filename='images/Couple/3.png')}}" alt="Image 3" />
+							<img src="{{url_for('static', filename='images/Couple/4.png')}}" alt="Image 4" />
+							<img src="{{url_for('static', filename='images/Couple/5.png')}}" alt="Image 5" />
+							<img src="{{url_for('static', filename='images/Couple/6.png')}}" alt="Image 6" />
+							<img src="{{url_for('static', filename='images/Couple/7.png')}}" alt="Image 7" />
+							<img src="{{url_for('static', filename='images/Couple/8.png')}}" alt="Image 8" />
+							<img src="{{url_for('static', filename='images/Couple/9.png')}}" alt="Image 9" />
+							<img src="{{url_for('static', filename='images/Couple/10.png')}}" alt="Image 10" />
+							<img src="{{url_for('static', filename='images/Couple/11.png')}}" alt="Image 11" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="additional-info" class="page">
+				<div id="info">
+					<p>Time: </p>
+					<span>6:00 pm</span>
+					<p>Date: </p>
+					<span>February 14th, 2024</span>
+					<p>Address:</p>
+					<a href="https://maps.app.goo.gl/rymuZ6ufgWQB3C4K9" rel="noopener noreferrer" target="_blank"
+						><span>200 Hempstead Street<br />New London, CT 06320</span></a
+					>
+				</div>
+			</div>
+		</div>
+
+		<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+	</body>
+</html>
