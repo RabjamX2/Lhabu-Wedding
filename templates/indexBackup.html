@@ -12,7 +12,7 @@
 				<!-- Layered images -->
 				<img src="{{url_for('static', filename='images/backgroundSmall.png')}}" alt="landing" class="landing-image" />
 				<div id="landing-gradient"></div>
-				<h1 id="landing-header">Our Wedding</h1>
+				<h1 id="landing-header">To {{name}}</h1>
 				<div id="landing-content">
 					<h2>Tenzin Yawongtsang</h2>
 					<h3>&</h3>
@@ -36,7 +36,6 @@
 							<img src="{{url_for('static', filename='images/Couple/8.png')}}" alt="Image 8" />
 							<img src="{{url_for('static', filename='images/Couple/9.png')}}" alt="Image 9" />
 							<img src="{{url_for('static', filename='images/Couple/10.png')}}" alt="Image 10" />
-							<img src="{{url_for('static', filename='images/Couple/11.png')}}" alt="Image 11" />
 						</div>
 					</div>
 				</div>
@@ -56,6 +55,9 @@
 			</div>
 		</div>
 
+		<script type="text/javascript">
+			var name = "{{ name }}";
+		</script>
 		<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 	</body>
 </html>

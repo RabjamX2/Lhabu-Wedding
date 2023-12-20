@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("indexDefault.html")
+    return render_template("index.html")
 
 
 @app.route("/<name>")
@@ -15,4 +15,4 @@ def indexName(name):
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
