@@ -76,6 +76,8 @@ html {
 	text-align: center;
 	white-space: nowrap;
 	z-index: 4;
+	background-color: rgba(105, 146, 210, 0.57);
+	color: #d0a34b;
 }
 
 h2 {
