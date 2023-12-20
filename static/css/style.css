@@ -72,41 +72,43 @@ html {
 	z-index: 4;
 }
 
+h1 {
+	font-size: 6vw;
+}
+
 #landing-header {
 	position: absolute;
-	top: 12rem;
+	top: 10vh;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-family: Blacksword;
-	font-size: 8rem;
+	font-size: 8vw;
 	color: #fff;
 	z-index: 4;
 }
-h1 {
-	font-size: 80vw;
-}
+
 h2 {
 	/* Couples Names */
 	font-family: Blacksword;
-	font-size: 70vw;
+	font-size: 6vw;
 	color: #fff;
 }
 
 h3 {
 	/* Ampersand Symbol */
 	font-family: Blacksword;
-	font-size: 40vw;
+	font-size: 6vw;
 	color: #fff;
 }
 
 p {
 	font-family: Blacksword;
-	font-size: 3rem;
+	font-size: 3vw;
 }
 
 span {
 	font-family: "Trebuchet MS", Arial, sans-serif;
-	font-size: 3rem;
+	font-size: 3vw;
 	color: #d7c272;
 }
 
@@ -117,7 +119,7 @@ span {
 
 #info {
 	font-family: Precious;
-	font-size: 2rem;
+	font-size: 2vw;
 	color: #d7c272;
 }
 
