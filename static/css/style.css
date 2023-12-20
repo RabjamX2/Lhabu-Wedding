@@ -82,18 +82,20 @@ html {
 	color: #fff;
 	z-index: 4;
 }
-
+h1 {
+	font-size: 80vw;
+}
 h2 {
 	/* Couples Names */
 	font-family: Blacksword;
-	font-size: 5rem;
+	font-size: 70vw;
 	color: #fff;
 }
 
 h3 {
 	/* Ampersand Symbol */
 	font-family: Blacksword;
-	font-size: 3rem;
+	font-size: 40vw;
 	color: #fff;
 }
 
