@@ -34,6 +34,7 @@ def inviteName(name):
     y = 2635
 
     draw.text((x, y), formatted_name, fill="white", font=font)
+    image.save("modified_image.png")
     return send_file("modified_image.png", mimetype="image/png")
 
 
