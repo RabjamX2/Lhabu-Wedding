@@ -92,6 +92,7 @@ html {
 
 #landing-content {
 	z-index: 4;
+	width: max-content;
 }
 
 #landing-header {
@@ -105,9 +106,9 @@ html {
 }
 
 #welcome-message {
-	font-size: 3vw;
+	/* font-size: 3vw; */
 	color: #ffffff;
-	width: 70vw;
+	/* width: 70vw; */
 	margin: 0 auto;
 	text-shadow: 5px 5px 5px black;
 }
@@ -115,7 +116,7 @@ html {
 h2 {
 	/* Couples Names */
 	font-family: Blacksword;
-	font-size: 6vw;
+	/* font-size: 6vw; */
 	color: #fff;
 	text-shadow: 10px 10px 5px black;
 }
@@ -123,18 +124,18 @@ h2 {
 h3 {
 	/* Ampersand Symbol */
 	font-family: Blacksword;
-	font-size: 6vw;
+	/* font-size: 6vw; */
 	color: #fff;
 }
 
 p {
 	font-family: Blacksword;
-	font-size: 3vw;
+	/* font-size: 3vw; */
 }
 
 span {
 	font-family: "Trebuchet MS", Arial, sans-serif;
-	font-size: 3vw;
+	/* font-size: 3vw; */
 	color: #d7c272;
 }
 
@@ -209,5 +210,12 @@ span {
 
 #additional-info {
 	z-index: 4;
-	background-color: #0c2f51;
+	/* background-color: #0c2f51; */
+}
+
+#landingGroup {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
