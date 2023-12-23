@@ -1,5 +1,6 @@
 from flask import Flask, render_template, send_file
 from PIL import Image, ImageDraw, ImageFont
+from io import BytesIO
 import logging
 
 logging.basicConfig(filename="error.log", level=logging.DEBUG)
@@ -38,8 +39,14 @@ def inviteName(name):
     y = 2635
 
     draw.text((x, y), formatted_name, fill="white", font=font)
-    image.save("modified_image.png")
-    return send_file("modified_image.png", mimetype="image/png")
+
+    # Save the image to a BytesIO buffer
+    buffer = BytesIO()
+    image.save(buffer, format="PNG")
+    buffer.seek(0)
+
+    # Send the buffer as a file
+    return send_file(buffer, mimetype="image/png")
 
 
 if __name__ == "__main__":
