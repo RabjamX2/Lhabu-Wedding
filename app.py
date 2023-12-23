@@ -1,5 +1,9 @@
 from flask import Flask, render_template, send_file
 from PIL import Image, ImageDraw, ImageFont
+import logging
+
+logging.basicConfig(filename="error.log", level=logging.DEBUG)
+
 
 app = Flask(__name__)
 
@@ -39,4 +43,4 @@ def inviteName(name):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
