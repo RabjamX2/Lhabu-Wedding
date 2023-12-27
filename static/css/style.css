@@ -38,6 +38,27 @@
 	}
 }
 
+@media screen and (max-width: 450px) {
+	:root {
+		--fs-lg: 2.25rem;
+		--fs-md: 1rem;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	:root {
+		--fs-lg: 2rem;
+		--fs-md: 1rem;
+	}
+}
+
+@media screen and (max-width: 325px) {
+	:root {
+		--fs-lg: 1.75rem;
+		--fs-md: 0.75rem;
+	}
+}
+
 @font-face {
 	font-family: Precious;
 	src: url("/static/fonts/Precious.ttf");
