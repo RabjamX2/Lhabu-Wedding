@@ -84,6 +84,7 @@ html {
 	scroll-behavior: smooth;
 	scroll-snap-type: y mandatory; /* vertical snapping */
 	height: 100vh;
+	height: -webkit-fill-available;
 	overflow: auto;
 }
 
@@ -96,12 +97,13 @@ html {
 	text-align: center;
 	justify-content: center;
 	height: 100vh;
+	height: -webkit-fill-available;
 }
 
 .landing-image {
 	position: absolute;
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	object-fit: cover;
 	z-index: 1;
 }
