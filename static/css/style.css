@@ -1,3 +1,43 @@
+:root {
+	/* --fs-xl: clamp(3.5rem, 12vw + 1rem, 6rem); */
+	--fs-lg: 4rem;
+	--fs-md: 3rem;
+	--fs-sm: 2rem;
+	--gold: #d0a34b;
+	--blue: #0c2f51;
+}
+
+@media screen and (max-width: 1300px) {
+	:root {
+		/* --fs-lg: 3rem; */
+		--fs-md: 2.5rem;
+		/* --fs-sm: 1rem; */
+	}
+}
+
+@media screen and (max-width: 1110px) {
+	:root {
+		--fs-lg: 3.5rem;
+		--fs-md: 2rem;
+		/* --fs-lg: 1.75rem; */
+	}
+}
+
+@media screen and (max-width: 768px) {
+	:root {
+		--fs-lg: 3rem;
+		--fs-md: 1.5rem;
+		--fs-sm: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	:root {
+		--fs-lg: 2.5rem;
+		--fs-md: 1rem;
+	}
+}
+
 @font-face {
 	font-family: Precious;
 	src: url("/static/fonts/Precious.ttf");
@@ -19,24 +59,6 @@ html {
 	font-size: 100%;
 }
 
-.desktop-only {
-	display: block;
-}
-
-.mobile-only {
-	display: none;
-}
-
-@media (max-width: 600px) {
-	.desktop-only {
-		display: none;
-	}
-
-	.mobile-only {
-		display: block;
-	}
-}
-
 #scroll-container {
 	scroll-behavior: smooth;
 	scroll-snap-type: y mandatory; /* vertical snapping */
@@ -53,12 +75,6 @@ html {
 	text-align: center;
 	justify-content: center;
 	height: 100vh;
-}
-
-@media (max-width: 600px) {
-	.page {
-		justify-content: center;
-	}
 }
 
 .landing-image {
@@ -92,7 +108,9 @@ html {
 
 #landing-content {
 	z-index: 4;
-	width: max-content;
+	width: 50vw;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 #landing-header {
@@ -100,23 +118,22 @@ html {
 	text-align: center;
 	white-space: nowrap;
 	z-index: 4;
+	padding-left: 50px;
+	margin-right: 50px;
 	/* background-color: rgba(105, 146, 210, 0.57); */
-	color: #d0a34b;
-	text-shadow: 10px 10px 10px black;
+	color: var(--gold);
+	text-shadow: 5px 5px 5px black;
 }
 
 #welcome-message {
-	/* font-size: 3vw; */
-	color: #ffffff;
-	/* width: 70vw; */
+	color: #fff;
 	margin: 0 auto;
-	text-shadow: 5px 5px 5px black;
 }
 
 h2 {
 	/* Couples Names */
 	font-family: Blacksword;
-	/* font-size: 6vw; */
+	font-size: var(--fs-lg);
 	color: #fff;
 	text-shadow: 10px 10px 5px black;
 }
@@ -124,50 +141,114 @@ h2 {
 h3 {
 	/* Ampersand Symbol */
 	font-family: Blacksword;
-	/* font-size: 6vw; */
+	font-size: var(--fs-md);
 	color: #fff;
 }
 
 p {
 	font-family: Blacksword;
-	/* font-size: 3vw; */
+	font-size: var(--fs-md);
+	text-shadow: 5px 5px 5px black;
 }
 
 span {
 	font-family: "Trebuchet MS", Arial, sans-serif;
-	/* font-size: 3vw; */
-	color: #d7c272;
+	font-size: var(--fs-md);
+	/* color: var(--gold); */
+	color: #fff;
+	text-shadow: 5px 5px 5px black;
 }
 
-#wedding-info {
+@keyframes bobbing {
+	0%,
+	100% {
+		transform: scale(1, -1) translate(-50%, -10px);
+	}
+	50% {
+		transform: scale(1, -1) translate(-50%, 10px);
+	}
+}
+
+.downArrow {
+	position: absolute;
+	width: max-content;
+	height: max-content;
+	bottom: 20px;
+	left: 50%;
+	transform: scale(1, -1) translate(-50%, 0%);
 	z-index: 4;
-	background-color: #0c2f51;
+	animation: bobbing 2s infinite;
 }
 
-#info {
-	font-family: Precious;
-	font-size: 2vw;
-	color: #d7c272;
+.downArrow::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		0deg,
+		var(--gold),
+		var(--gold),
+		var(--gold),
+		var(--gold),
+		white,
+		var(--gold),
+		var(--gold),
+		var(--gold),
+		var(--gold)
+	);
+	background-size: 300% 300%;
+	z-index: -1;
+	animation: moveWave 2s infinite;
+	mix-blend-mode: screen;
+	-webkit-mask: url("/static/images/arrow.png") center / contain no-repeat;
+	mask: url("/static/images/arrow.png") center / contain no-repeat;
+}
+
+.downArrow img {
+	width: 10vw;
+	position: relative;
+	display: block;
+	opacity: 0;
+}
+
+@keyframes moveWave {
+	0% {
+		background-position: 0% 0%;
+	}
+	100% {
+		background-position: 0% 90%;
+	}
+}
+
+#carousel-container {
+	z-index: 4;
+	background-color: var(--blue);
 }
 
 .carousel {
+	display: flex;
 	position: relative;
 	max-height: 80vh;
-	/* max-width: 70vw; Adjust as needed */
+	justify-content: center;
 	margin: auto;
 	overflow: hidden;
 }
 
 .carousel-track {
 	width: 100%;
-	height: 100%;
+	height: 90%;
 }
 
 .carousel-images {
 	scroll-snap-type: x mandatory;
 	display: flex;
-	width: 100%;
+	/* width: 100%; */
 	height: 100%;
+	padding-left: 100px;
+	padding-right: 100px;
 	overflow-x: scroll;
 	scroll-behavior: smooth;
 	/* scrollbar-width: none; */
@@ -209,8 +290,15 @@ span {
 }
 
 #additional-info {
+	display: flex;
+	flex-direction: column;
 	z-index: 4;
-	/* background-color: #0c2f51; */
+	height: 100%;
+	width: 50vw;
+	font-family: Precious;
+	color: var(--gold);
+	justify-content: space-evenly;
+	text-align: center;
 }
 
 #landingGroup {

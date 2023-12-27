@@ -3,7 +3,7 @@ from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
 import logging
 
-logging.basicConfig(filename="error.log", level=logging.DEBUG)
+# logging.basicConfig(filename="error.log", level=logging.DEBUG)
 
 
 app = Flask(__name__)
@@ -50,4 +50,4 @@ def inviteName(name):
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
