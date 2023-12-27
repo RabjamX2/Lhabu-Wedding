@@ -18,3 +18,19 @@ images.forEach((img) => {
 		carouselImages.scrollLeft = scrollPosition;
 	});
 });
+
+function adjustFontSize() {
+	const container = document.getElementById("landing-header");
+	let fontSize = 100; // Start with a default font size
+	container.style.fontSize = fontSize + "px";
+
+	// Reduce the font size until the text fits within the width and height of the container
+	while (container.scrollWidth > container.offsetWidth) {
+		fontSize--;
+		if (fontSize <= 0) break; // Prevents font size from becoming negative
+		container.style.fontSize = fontSize + "px";
+	}
+}
+
+window.onresize = adjustFontSize;
+adjustFontSize();
