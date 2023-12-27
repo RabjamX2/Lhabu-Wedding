@@ -1,5 +1,5 @@
 :root {
-	/* --fs-xl: clamp(3.5rem, 12vw + 1rem, 6rem); */
+	--fs-xl: 6rem;
 	--fs-lg: 4rem;
 	--fs-md: 3rem;
 	--fs-sm: 2rem;
@@ -135,14 +135,36 @@ html {
 	padding-left: 10px;
 	padding-right: 10px;
 }
+#additional-info {
+	display: flex;
+	flex-direction: column;
+	z-index: 4;
+	height: 100%;
+	width: 50vw;
+	font-family: Precious;
+	color: var(--gold);
+	justify-content: space-evenly;
+	text-align: center;
+}
 
+#landingGroup {
+	margin-top: auto;
+	margin-bottom: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
 #landing-header {
 	font-family: Blacksword;
 	text-align: center;
-	white-space: nowrap;
+	/* white-space: nowrap; */
+	text-wrap: balance;
+
 	z-index: 4;
 	padding-left: 2vw;
 	margin-right: 2vw;
+
 	/* background-color: rgba(105, 146, 210, 0.57); */
 	color: var(--gold);
 	text-shadow: 5px 5px 5px black;
@@ -151,6 +173,7 @@ html {
 #welcome-message {
 	color: #fff;
 	margin: 0 auto;
+	text-wrap: balance;
 }
 
 h2 {
@@ -231,7 +254,7 @@ span {
 }
 
 .downArrow img {
-	width: 10vw;
+	width: var(--fs-xl);
 	position: relative;
 	display: block;
 	opacity: 0;
@@ -310,23 +333,4 @@ span {
 
 .carousel .next {
 	right: 10px;
-}
-
-#additional-info {
-	display: flex;
-	flex-direction: column;
-	z-index: 4;
-	height: 100%;
-	width: 50vw;
-	font-family: Precious;
-	color: var(--gold);
-	justify-content: space-evenly;
-	text-align: center;
-}
-
-#landingGroup {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
 }
