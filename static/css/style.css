@@ -138,7 +138,7 @@ body {
 	scroll-behavior: smooth;
 	scroll-snap-type: y mandatory; /* vertical snapping */
 	height: 100vh;
-	height: 100lvh;
+	height: -webkit-fill-available;
 	overflow: auto;
 }
 
@@ -146,15 +146,12 @@ body {
 	scroll-snap-align: start; /* align to the start of the container */
 	display: flex;
 	width: 100%;
-	width: -moz-available; /* WebKit-based browsers will ignore this. */
-	width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
-	width: fill-available;
 	flex-direction: column;
 	position: relative;
 	text-align: center;
 	justify-content: center;
-	height: 100%;
-	height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+	height: 100vh;
+	height: -webkit-fill-available;
 }
 
 .landing-image {
