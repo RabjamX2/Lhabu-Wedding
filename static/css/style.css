@@ -7,11 +7,24 @@
 	--blue: #0c2f51;
 }
 
+.desktop {
+	display: block;
+}
+.mobile {
+	display: none;
+}
+
 @media screen and (max-width: 1300px) {
 	:root {
 		/* --fs-lg: 3rem; */
 		--fs-md: 2.5rem;
 		/* --fs-sm: 1rem; */
+	}
+	.desktop {
+		display: block;
+	}
+	.mobile {
+		display: none;
 	}
 }
 
@@ -21,6 +34,12 @@
 		--fs-md: 2rem;
 		/* --fs-lg: 1.75rem; */
 	}
+	.desktop {
+		display: block;
+	}
+	.mobile {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -29,6 +48,12 @@
 		--fs-md: 1.5rem;
 		--fs-sm: 1.5rem;
 	}
+	.desktop {
+		display: block;
+	}
+	.mobile {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 550px) {
@@ -36,26 +61,51 @@
 		--fs-lg: 2.5rem;
 		--fs-md: 1rem;
 	}
+	.desktop {
+		display: block;
+	}
+	.mobile {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 450px) {
 	:root {
 		--fs-lg: 2.25rem;
-		--fs-md: 1rem;
+		--fs-md: 1.75rem;
+	}
+
+	.desktop {
+		display: none;
+	}
+	.mobile {
+		display: block;
 	}
 }
 
 @media screen and (max-width: 380px) {
 	:root {
 		--fs-lg: 2rem;
-		--fs-md: 1rem;
+		--fs-md: 1.5rem;
+	}
+	.desktop {
+		display: none;
+	}
+	.mobile {
+		display: block;
 	}
 }
 
 @media screen and (max-width: 325px) {
 	:root {
 		--fs-lg: 1.75rem;
-		--fs-md: 0.75rem;
+		--fs-md: 1.25rem;
+	}
+	.desktop {
+		display: none;
+	}
+	.mobile {
+		display: block;
 	}
 }
 
@@ -158,22 +208,20 @@ html {
 #landing-header {
 	font-family: Blacksword;
 	text-align: center;
-	/* white-space: nowrap; */
 	text-wrap: balance;
-
 	z-index: 4;
 	padding-left: 2vw;
+	margin-top: 5vh;
 	margin-right: 2vw;
-
-	/* background-color: rgba(105, 146, 210, 0.57); */
 	color: var(--gold);
 	text-shadow: 5px 5px 5px black;
 }
 
-#welcome-message {
+.welcome-message {
 	color: #fff;
 	margin: 0 auto;
 	text-wrap: balance;
+	z-index: 4;
 }
 
 h2 {
