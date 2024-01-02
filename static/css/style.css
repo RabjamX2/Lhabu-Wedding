@@ -138,7 +138,7 @@ body {
 	scroll-behavior: smooth;
 	scroll-snap-type: y mandatory; /* vertical snapping */
 	height: 100vh;
-	height: 100dvh;
+	height: 100lvh;
 	overflow: auto;
 }
 
@@ -154,9 +154,7 @@ body {
 	text-align: center;
 	justify-content: center;
 	height: 100%;
-	height: -moz-available; /* WebKit-based browsers will ignore this. */
 	height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
-	height: fill-available;
 }
 
 .landing-image {
