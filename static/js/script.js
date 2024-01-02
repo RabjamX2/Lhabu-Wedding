@@ -25,7 +25,7 @@ function adjustFontSize() {
 	container.style.fontSize = fontSize + "px";
 
 	// Reduce the font size until the text fits within the width and height of the container
-	while (container.scrollWidth > container.offsetWidth || container.offsetHeight > screen.availHeight / 3) {
+	while (container.scrollWidth > container.offsetWidth || container.offsetHeight > screen.availHeight / 5) {
 		fontSize--;
 		if (fontSize <= 0) break; // Prevents font size from becoming negative
 		container.style.fontSize = fontSize + "px";
